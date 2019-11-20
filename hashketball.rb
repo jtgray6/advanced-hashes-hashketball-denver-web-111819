@@ -107,7 +107,7 @@ def num_points_scored(player_search)
   game_hash.each do |team, team_info|
     team_info[:players].each do |player|
       if player[:player_name] == player_search
-        return player[:points]
+       return player[:points]
       end
     end
   end
@@ -126,7 +126,8 @@ end
 def team_colors(team_input)
   if team_input.downcase == "charlotte hornets" 
     return game_hash[:away][:colors]
-  else return game_hash[:home][:colors]
+  else 
+    return game_hash[:home][:colors]
   end
 end
 
@@ -149,7 +150,7 @@ def player_numbers(input)
       end
     end
   end
-  return output
+  output
 end
 
 def player_stats(input)
